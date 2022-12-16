@@ -15,7 +15,13 @@ public abstract class Person {
     private Address address;
 
     public Person() {
-        System.out.println("Person is created ");
+    }
+
+    public Person(String firstName, String lastName, String middleName, LocalDate birthDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.birthDate = birthDate;
     }
 
     public String getPersonString() {

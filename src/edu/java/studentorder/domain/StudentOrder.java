@@ -8,6 +8,16 @@ public class StudentOrder {
 
     private Adult wife;
 
+    private Child child;
+
+    public Child getChild() {
+        return child;
+    }
+
+    public void setChild(Child child) {
+        this.child = child;
+    }
+
     public long getStudentOrderId() {
         return studentOrderId;
     }

@@ -4,6 +4,8 @@ import edu.java.studentorder.domain.Adult;
 import edu.java.studentorder.domain.Person;
 import edu.java.studentorder.domain.StudentOrder;
 
+import java.time.LocalDate;
+
 public class SaveStudentOrder {
 
     public static void main(String[] args) {
@@ -19,19 +21,10 @@ public class SaveStudentOrder {
         return answer;
     }
 
-    static StudentOrder buildStudentOrder() {
+    static StudentOrder buildStudentOrder(long id) {
         StudentOrder so = new StudentOrder();
-
-        Adult husband = new Adult();
-
-//        husband.setFirstName("Andrey");
-//        husband.setLastName("Petrov");
-//        husband.setPassportNumber("123456");
-//        so.setHusband(husband);
-//
-//        String str = husband.getPersonString();
-//        System.out.println(str);
-
+        so.setStudentOrderId(id);
+        Adult husband = new Adult("Vasiliev", "Andrey", "Petrovich", LocalDate.now());
         return so;
     }
 }
